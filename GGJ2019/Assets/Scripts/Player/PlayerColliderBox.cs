@@ -35,38 +35,39 @@ public class PlayerColliderBox : MonoBehaviour {
                         CollidedTimer += Time.deltaTime;
                         if (CollidedTimer >= CollisionTimer)
                         {
-                            // Get the hit direction on the box
-                            var hitDirection = ReturnDirection(gameObject, Collision.collider.gameObject);
-                            // depending on hit direction and if force still applied, call the move of the box
-                            // on the correct direction
-                            if (hitDirection == HitDirection.Left && moveHorizontal == 1)
-                            {
-                                if (!CheckWallAtBox(Collision.collider.gameObject, transform.right))
-                                {
-                                    boxMovement.MoveBox(transform.right);
-                                }
-                            }
-                            else if (hitDirection == HitDirection.Right && moveHorizontal == -1)
-                            {
-                                if (!CheckWallAtBox(Collision.collider.gameObject, -transform.right))
-                                {
-                                    boxMovement.MoveBox(-transform.right);
-                                }
-                            }
-                            else if (hitDirection == HitDirection.Forward && moveVertical == -1)
-                            {
-                                if (!CheckWallAtBox(Collision.collider.gameObject, -transform.forward))
-                                {
-                                    boxMovement.MoveBox(-transform.forward);
-                                }
-                            }
-                            else if (hitDirection == HitDirection.Back && moveVertical == 1)
-                            {
-                                if (!CheckWallAtBox(Collision.collider.gameObject, transform.forward))
-                                {
-                                    boxMovement.MoveBox(transform.forward);
-                                }
-                            }
+                            boxMovement.MoveBox();
+                            //// Get the hit direction on the box
+                            //var hitDirection = ReturnDirection(gameObject, Collision.collider.gameObject);
+                            //// depending on hit direction and if force still applied, call the move of the box
+                            //// on the correct direction
+                            //if (hitDirection == HitDirection.Left && moveHorizontal == 1)
+                            //{
+                            //    if (!CheckWallAtBox(Collision.collider.gameObject, transform.right))
+                            //    {
+                            //        boxMovement.MoveBox(transform.right);
+                            //    }
+                            //}
+                            //else if (hitDirection == HitDirection.Right && moveHorizontal == -1)
+                            //{
+                            //    if (!CheckWallAtBox(Collision.collider.gameObject, -transform.right))
+                            //    {
+                            //        boxMovement.MoveBox(-transform.right);
+                            //    }
+                            //}
+                            //else if (hitDirection == HitDirection.Forward && moveVertical == -1)
+                            //{
+                            //    if (!CheckWallAtBox(Collision.collider.gameObject, -transform.forward))
+                            //    {
+                            //        boxMovement.MoveBox(-transform.forward);
+                            //    }
+                            //}
+                            //else if (hitDirection == HitDirection.Back && moveVertical == 1)
+                            //{
+                            //    if (!CheckWallAtBox(Collision.collider.gameObject, transform.forward))
+                            //    {
+                            //        boxMovement.MoveBox(transform.forward);
+                            //    }
+                            //}
                         }
                     }
                     else

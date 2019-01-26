@@ -8,6 +8,7 @@ public class BoxMovement : MonoBehaviour {
 
     public bool IsMoving = false;
     public Vector3 MoveSide;
+    public Direction direct;
 
     private void Start()
     {
@@ -23,12 +24,14 @@ public class BoxMovement : MonoBehaviour {
         Debug.DrawLine(originalPos, targetPosition);
     }
 
-    public void MoveBox(Vector3 Side)
+    public void MoveBox()
     {
         Vector3 myPosition = transform.position;
-        Vector3 rayDirection = Side;
+        Vector3 rayDirection = direct == Direction.Back ? transform.forward
+            : direct == Direction.Forward ? -transform.forward
+            : direct == Direction.Left ? transform.right
+            : -transform.right;
         RaycastHit hitInfo;
-        
         if (Physics.Raycast(myPosition, rayDirection, out hitInfo))
         {
             targetPosition = hitInfo.point;
