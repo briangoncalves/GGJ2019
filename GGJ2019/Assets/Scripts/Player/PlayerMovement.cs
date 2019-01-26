@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
 	}
 	
-	void FixedUpdate () {
+	void Update () {
         // If is hiding, can move is set to false
         if (CanMove)
         {

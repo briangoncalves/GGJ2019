@@ -78,17 +78,21 @@ public class PlayerColliderBox : MonoBehaviour {
         }
     }
 
+    public float WallDistance = .6f;
+
     private bool CheckWallAtBox(GameObject box, Vector3 positionToPush)
     {
         var result = false;
         Vector3 myPosition = box.transform.position;
         Vector3 rayDirection = positionToPush;
-        float rayLengthMeters = 0.3f;
+        float rayLengthMeters = WallDistance;
         RaycastHit hitInfo;
 
         if (Physics.Raycast(myPosition, rayDirection, out hitInfo, rayLengthMeters))
         {
-            if (hitInfo.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Wall")))
+            if ((hitInfo.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Wall"))) ||
+                (hitInfo.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Box"))) ||
+                (hitInfo.collider.gameObject.layer.Equals(LayerMask.NameToLayer("HideSpot"))))
             {
                 return true;
             }
