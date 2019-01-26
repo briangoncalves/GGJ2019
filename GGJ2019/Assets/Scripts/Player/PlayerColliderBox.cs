@@ -32,14 +32,17 @@ public class PlayerColliderBox : MonoBehaviour {
                         if (CollidedTimer >= CollisionTimer)
                         {
                             var hitDirection = ReturnDirection(gameObject, Collision.collider.gameObject);
-                            //Debug.Log("Hit Direction: " + hitDirection.ToString());
-                            if (hitDirection == HitDirection.Left)
+                            Debug.Log("Hit Direction: " + hitDirection.ToString());
+                            Vector3 HitPosition = gameObject.transform.position - Collision.collider.transform.position;
+                            Debug.Log(HitPosition.ToString());
+                            //Debug.Log(moveVertical.ToString() + " - " + moveHorizontal.ToString());
+                            if (hitDirection == HitDirection.Left && moveHorizontal == 1)
                                 boxMovement.MoveBox(transform.right);
-                            else if (hitDirection == HitDirection.Right)
+                            else if (hitDirection == HitDirection.Right && moveHorizontal == -1)
                                 boxMovement.MoveBox(-transform.right);
-                            else if (hitDirection == HitDirection.Forward)
+                            else if (hitDirection == HitDirection.Forward && moveVertical == -1)
                                 boxMovement.MoveBox(-transform.forward);
-                            else if (hitDirection == HitDirection.Back)
+                            else if (hitDirection == HitDirection.Back && moveVertical == 1)
                                 boxMovement.MoveBox(transform.forward);
                         }
                     }
@@ -58,13 +61,13 @@ public class PlayerColliderBox : MonoBehaviour {
 
         HitDirection hitDirection = HitDirection.None;
         Vector3 HitPosition = Object.transform.position - ObjectHit.transform.position;
-        if (HitPosition.z > 0.5)
+        if (HitPosition.z > 0.3)
             hitDirection = HitDirection.Forward;
-        else if (HitPosition.z < -0.5)
+        else if (HitPosition.z < -0.3)
             hitDirection = HitDirection.Back;
-        else if (HitPosition.x > 0.5)
+        else if (HitPosition.x > 0.3)
             hitDirection = HitDirection.Right;
-        else if (HitPosition.x < -0.5)
+        else if (HitPosition.x < -0.3)
             hitDirection = HitDirection.Left;
         return hitDirection;
     }    

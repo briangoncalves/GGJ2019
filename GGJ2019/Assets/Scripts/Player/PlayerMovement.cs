@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     [Header("Player Movement")]
-    public float MoveSpeed = 2;
+    public float MoveSpeed = 3;
 
     private Rigidbody rb;
 	// Use this for initialization
@@ -20,6 +20,6 @@ public class PlayerMovement : MonoBehaviour {
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        rb.AddForce(movement * MoveSpeed);
+        rb.velocity = movement * MoveSpeed;
     }
 }
