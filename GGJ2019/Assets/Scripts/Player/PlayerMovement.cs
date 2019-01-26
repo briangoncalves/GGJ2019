@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour {
     [Header("Player Movement")]
     public float MoveSpeed = 3;
     public bool CanMove = true;
-
     private Rigidbody rb;
 	void Start () {
         rb = GetComponent<Rigidbody>();
