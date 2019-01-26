@@ -16,23 +16,17 @@ public class BoxMovement : MonoBehaviour {
 
     public Vector3 targetPosition;
     public Vector3 originalPos;
-    //public Quaternion targetRotation; //Optional of course
     public float smoothFactor = 2;
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * smoothFactor);
         Debug.DrawLine(originalPos, targetPosition);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * smoothFactor);
     }
 
     public void MoveBox(Vector3 Side)
     {
-        // Set the move direction, called by the player
-        //IsMoving = true;
-        //MoveSide = Side;
         Vector3 myPosition = transform.position;
         Vector3 rayDirection = Side;
-        //float rayLengthMeters = WallDistance;
         RaycastHit hitInfo;
         
         if (Physics.Raycast(myPosition, rayDirection, out hitInfo))
@@ -47,14 +41,4 @@ public class BoxMovement : MonoBehaviour {
         }
         originalPos = transform.position;
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    // if is moving and collide, it stop moving
-    //    if (IsMoving)
-    //    {
-    //        IsMoving = false;
-    //        trans.Translate(Vector3.zero);
-    //    }
-    //}
 }
