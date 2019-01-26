@@ -18,6 +18,7 @@ public class BoxMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        // when moving is set, translate to the set direction
         if (IsMoving)
         {
             trans.Translate(MoveSide * Time.deltaTime * MoveSpeed);
@@ -26,13 +27,14 @@ public class BoxMovement : MonoBehaviour {
 
     public void MoveBox(Vector3 Side)
     {
+        // Set the move direction, called by the player
         IsMoving = true;
         MoveSide = Side;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        // if is moving and collide, it stop moving
         if (IsMoving)
         {
             IsMoving = false;

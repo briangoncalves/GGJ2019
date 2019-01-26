@@ -6,20 +6,23 @@ public class PlayerMovement : MonoBehaviour {
 
     [Header("Player Movement")]
     public float MoveSpeed = 3;
+    public bool CanMove = true;
 
     private Rigidbody rb;
-	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        // If is hiding, can move is set to false
+        if (CanMove)
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        rb.velocity = movement * MoveSpeed;
+            rb.velocity = movement * MoveSpeed;
+        }
     }
 }
