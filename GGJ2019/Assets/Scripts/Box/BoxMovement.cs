@@ -15,11 +15,13 @@ public class BoxMovement : MonoBehaviour {
     }
 
     public Vector3 targetPosition;
+    public Vector3 originalPos;
     //public Quaternion targetRotation; //Optional of course
     public float smoothFactor = 2;
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * smoothFactor);
+        Debug.DrawLine(originalPos, targetPosition);
         //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * smoothFactor);
     }
 
@@ -35,9 +37,15 @@ public class BoxMovement : MonoBehaviour {
         
         if (Physics.Raycast(myPosition, rayDirection, out hitInfo))
         {
-            Debug.DrawLine(myPosition, hitInfo.collider.gameObject.transform.position);
-            targetPosition = hitInfo.collider.gameObject.transform.position;
+            targetPosition = hitInfo.point;
+            Vector3 bound = GetComponent<Renderer>().bounds.extents;
+            Vector3 r = new Vector3();
+            r.x = bound.x * rayDirection.x;
+            r.y = bound.y * rayDirection.y;
+            r.z = bound.z * rayDirection.z;
+            targetPosition -= r;
         }
+        originalPos = transform.position;
     }
 
     //private void OnCollisionEnter(Collision collision)
