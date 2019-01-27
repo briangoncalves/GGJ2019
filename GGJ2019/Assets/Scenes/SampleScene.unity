@@ -1050,7 +1050,7 @@ GameObject:
   - component: {fileID: 519189324}
   - component: {fileID: 519189326}
   - component: {fileID: 519189325}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2869,7 +2869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1648717060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3289,7 +3289,7 @@ GameObject:
   - component: {fileID: 1858362250}
   - component: {fileID: 1858362252}
   - component: {fileID: 1858362251}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3372,7 +3372,7 @@ GameObject:
   - component: {fileID: 1952729456}
   - component: {fileID: 1952729458}
   - component: {fileID: 1952729457}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3701,7 +3701,7 @@ GameObject:
   - component: {fileID: 2031747108}
   - component: {fileID: 2031747110}
   - component: {fileID: 2031747109}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
