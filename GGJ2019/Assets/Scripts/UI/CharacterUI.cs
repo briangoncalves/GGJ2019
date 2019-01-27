@@ -4,14 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterUI : MonoBehaviour {
-
-    public GameObject Player;
+    
     public Text SelectedCharacterUI; //UI Text Object
 
-    private PlayerSelect pl;
+    public PlayerSelect pl;
 	// Use this for initialization
 	void Start () {
-        pl = Player.GetComponent<PlayerSelect>();
 	}
 	
 	// Update is called once per frame

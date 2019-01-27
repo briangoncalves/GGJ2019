@@ -1,11 +1,83 @@
 fileFormatVersion: 2
 guid: 3dd043cbdec274478af0660b99882ac6
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      74: -203655887218126122
-    second: mixamo.com
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ela:ela
+    100002: ela:Head
+    100004: ela:HeadTop_End
+    100006: ela:Hips
+    100008: ela:LeftArm
+    100010: ela:LeftFoot
+    100012: ela:LeftForeArm
+    100014: ela:LeftHand
+    100016: ela:LeftHandIndex1
+    100018: ela:LeftHandIndex2
+    100020: ela:LeftHandIndex3
+    100022: ela:LeftHandIndex4
+    100024: ela:LeftLeg
+    100026: ela:LeftShoulder
+    100028: ela:LeftToe_End
+    100030: ela:LeftToeBase
+    100032: ela:LeftUpLeg
+    100034: ela:Neck
+    100036: ela:RightArm
+    100038: ela:RightFoot
+    100040: ela:RightForeArm
+    100042: ela:RightHand
+    100044: ela:RightHandIndex1
+    100046: ela:RightHandIndex2
+    100048: ela:RightHandIndex3
+    100050: ela:RightHandIndex4
+    100052: ela:RightLeg
+    100054: ela:RightShoulder
+    100056: ela:RightToe_End
+    100058: ela:RightToeBase
+    100060: ela:RightUpLeg
+    100062: ela:Spine
+    100064: ela:Spine1
+    100066: ela:Spine2
+    100068: //RootNode
+    400000: ela:ela
+    400002: ela:Head
+    400004: ela:HeadTop_End
+    400006: ela:Hips
+    400008: ela:LeftArm
+    400010: ela:LeftFoot
+    400012: ela:LeftForeArm
+    400014: ela:LeftHand
+    400016: ela:LeftHandIndex1
+    400018: ela:LeftHandIndex2
+    400020: ela:LeftHandIndex3
+    400022: ela:LeftHandIndex4
+    400024: ela:LeftLeg
+    400026: ela:LeftShoulder
+    400028: ela:LeftToe_End
+    400030: ela:LeftToeBase
+    400032: ela:LeftUpLeg
+    400034: ela:Neck
+    400036: ela:RightArm
+    400038: ela:RightFoot
+    400040: ela:RightForeArm
+    400042: ela:RightHand
+    400044: ela:RightHandIndex1
+    400046: ela:RightHandIndex2
+    400048: ela:RightHandIndex3
+    400050: ela:RightHandIndex4
+    400052: ela:RightLeg
+    400054: ela:RightShoulder
+    400056: ela:RightToe_End
+    400058: ela:RightToeBase
+    400060: ela:RightUpLeg
+    400062: ela:Spine
+    400064: ela:Spine1
+    400066: ela:Spine2
+    400068: //RootNode
+    2100000: lambert1
+    4300000: ela:ela
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: ela:ela
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -37,7 +109,6 @@ ModelImporter:
     - serializedVersion: 16
       name: mixamo.com
       takeName: mixamo.com
-      internalID: -203655887218126122
       firstFrame: 0
       lastFrame: 45
       wrapMode: 0
@@ -84,13 +155,10 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -107,7 +175,6 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
