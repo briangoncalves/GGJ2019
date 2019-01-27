@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevel : MonoBehaviour {
-    public string Level;
+public class NextLevel : MonoBehaviour 
+{
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Player")))
-        {
-            SceneManager.LoadScene(Level);
-        }
+        if(other.tag == "Player")
+            GameManager.Instance.LoadNextRoom();
     }
+
+
 }
