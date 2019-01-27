@@ -10,7 +10,6 @@ public class BoxTrigger : MonoBehaviour {
    
         if (other.tag == "Player")
         {
-            Debug.Log("Trigger");
             box.direct = direct;
         }
     }
