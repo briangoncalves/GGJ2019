@@ -14,7 +14,7 @@ public class CharacterUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        SelectedCharacterUI.text = pl.player.ToString();
+       //ss SelectedCharacterUI.text = pl.player.ToString();
 
     }
 }
