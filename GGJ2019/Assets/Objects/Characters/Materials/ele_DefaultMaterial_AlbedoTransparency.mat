@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ela_DefaultMaterial_AlbedoTransparency
+  m_Name: ele_DefaultMaterial_AlbedoTransparency
   m_Shader: {fileID: 10704, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 01f1ce5688cf18542bb50d4b313ecb02, type: 3}
+        m_Texture: {fileID: 2800000, guid: c0a8d80ca0bbfed409c4812ec80a94f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 006d3ca09d5f6c54590d05f4658151fb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5bc2200ac90c38e4f97327e2e9a033a2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

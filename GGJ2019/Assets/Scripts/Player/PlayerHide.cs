@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHide : MonoBehaviour {
+    PlayerSelect anim;
 
     bool IsTouchingLayer(Vector3 center, float radius, string layer)
     {
@@ -21,10 +22,12 @@ public class PlayerHide : MonoBehaviour {
     private void Start()
     {
         pm = GetComponent<PlayerMovement>();
+        anim = GetComponent<PlayerSelect>();
     }
 
     void FixedUpdate()
     {
+
         // if action button pressed, hide
         if (Input.GetButton(HideKey))
         {
@@ -32,20 +35,19 @@ public class PlayerHide : MonoBehaviour {
             if (IsTouchingLayer(transform.position, DistanceRadius, "HideSpot"))
             {
                 // if on hiding spot, character stops to render
-                GetComponent<MeshRenderer>().enabled = false;
-                pm.CanMove = false;
+                anim.SetCurrentAvatarHide(true);
             }
             else
             {
                 // if not on hiding spot, render
-                GetComponent<MeshRenderer>().enabled = true;
+                anim.SetCurrentAvatarHide(false);
                 pm.CanMove = true;
             }
         }
         else
         {
             // if not key pressed, render
-            GetComponent<MeshRenderer>().enabled = true;
+            anim.SetCurrentAvatarHide(false);
             pm.CanMove = true;
         }
     }    
