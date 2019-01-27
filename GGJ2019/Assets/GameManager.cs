@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-
+    public PlayerSelect player;
     public Transform playerTransform;
     public GameObject room0Prefab;
-    Room currentRoom;
+    public Room currentRoom;
     public GameObject[] levels;
     int index = -1;
 
@@ -16,6 +16,14 @@ public class GameManager : Singleton<GameManager>
     {
         currentRoom  = Instantiate(room0Prefab).GetComponent<Room>();
         playerTransform.position = currentRoom.playerStartPosition.position;
+        if(currentRoom.defaultCharacter == PlayerSelect.Character.InnocentGirl)
+        {
+            player.SetInnocentGirl();
+        }
+        else
+        {
+            player.SetStrongMan();
+        }
     }
 
     private void Update()
@@ -40,6 +48,14 @@ public class GameManager : Singleton<GameManager>
 
             playerTransform.position = room.playerStartPosition.position;
             currentRoom = room;
+            if (currentRoom.defaultCharacter == PlayerSelect.Character.InnocentGirl)
+            {
+                player.SetInnocentGirl();
+            }
+            else
+            {
+                player.SetStrongMan();
+            }
         }
     }
 }

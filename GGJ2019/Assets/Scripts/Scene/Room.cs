@@ -9,6 +9,8 @@ public class Room : MonoBehaviour
     public Transform NewRoomPos;
     public Transform playerStartPosition;
     public GameObject[] prefabs;
+    public PlayerSelect.Character defaultCharacter = PlayerSelect.Character.InnocentGirl;
+    public bool canChange = true;
     Transform cam;
     public static Room activeRoom;
     bool cameraMove = true;

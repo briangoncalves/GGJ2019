@@ -38,7 +38,7 @@ public class PlayerSelect : MonoBehaviour
         }
     }
 
-    void SetInnocentGirl()
+    public void SetInnocentGirl()
     {
         player = Character.InnocentGirl;
         charactersAvatar[animatorIndex].gameObject.SetActive(false);
@@ -48,7 +48,7 @@ public class PlayerSelect : MonoBehaviour
             MoveObjectScript.enabled = false;
     }
 
-    void SetStrongMan()
+    public void SetStrongMan()
     {
         player = Character.StrongMan;
         charactersAvatar[animatorIndex].gameObject.SetActive(false);
@@ -64,7 +64,7 @@ public class PlayerSelect : MonoBehaviour
     void Update()
     {
         // Change player
-        if (Input.GetButtonDown("Fire2"))
+        if (GameManager.Instance.currentRoom.canChange && Input.GetButtonDown("Fire2"))
         {
             if (player == Character.CrazyDude)
             {
