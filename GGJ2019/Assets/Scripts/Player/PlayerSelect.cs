@@ -11,7 +11,6 @@ public class PlayerSelect : MonoBehaviour
     int animatorIndex = 0;
     
     private PlayerColliderBox MoveObjectScript;
-    private PlayerHide HideScript;
     private PlayerMovement PlMovement;
 
     public int MinTimeInCrazyMode = 5;
@@ -19,10 +18,7 @@ public class PlayerSelect : MonoBehaviour
 
     void Start () {
         MoveObjectScript = GetComponent<PlayerColliderBox>();
-        HideScript = GetComponent<PlayerHide>();
         PlMovement = GetComponent<PlayerMovement>();
-        if (HideScript != null)
-            HideScript.enabled = true;
         if (MoveObjectScript != null)
             MoveObjectScript.enabled = false;
     }
@@ -48,9 +44,6 @@ public class PlayerSelect : MonoBehaviour
         charactersAvatar[animatorIndex].gameObject.SetActive(false);
         charactersAvatar[0].gameObject.SetActive(true);
         animatorIndex = 0;
-        // enable / disable each character ability
-        if (HideScript != null)
-            HideScript.enabled = true;
         if (MoveObjectScript != null)
             MoveObjectScript.enabled = false;
     }
@@ -62,9 +55,6 @@ public class PlayerSelect : MonoBehaviour
         charactersAvatar[1].gameObject.SetActive(true);
 
         animatorIndex = 1;
-        // enable / disable each character ability
-        if (HideScript != null)
-            HideScript.enabled = false;
         if (MoveObjectScript != null)
             MoveObjectScript.enabled = true;
     }

@@ -7,9 +7,10 @@ public class BoxTrigger : MonoBehaviour {
     public Direction direct;
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger");
-        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("Player")))
+   
+        if (other.tag == "Player")
         {
+            Debug.Log("Trigger");
             box.direct = direct;
         }
     }
