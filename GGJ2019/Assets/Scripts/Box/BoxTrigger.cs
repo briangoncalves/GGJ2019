@@ -18,7 +18,8 @@ public class BoxTrigger : MonoBehaviour {
     private void OnTriggerExit(Collider other)
     {
         CounterArrow.SetActive(false);
+        box.direct = Direction.None;
     }
 }
 
-public enum Direction { Left, Right, Back, Forward }
+public enum Direction { Left, Right, Back, Forward, None }

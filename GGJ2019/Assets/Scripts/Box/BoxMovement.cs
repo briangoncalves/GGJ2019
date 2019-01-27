@@ -26,6 +26,7 @@ public class BoxMovement : MonoBehaviour {
 
     public void MoveBox()
     {
+        if (direct == Direction.None) return;
         Vector3 myPosition = transform.position;
         Vector3 rayDirection = direct == Direction.Back ? transform.forward
             : direct == Direction.Forward ? -transform.forward
