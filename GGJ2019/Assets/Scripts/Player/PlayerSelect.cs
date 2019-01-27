@@ -15,7 +15,9 @@ public class PlayerSelect : MonoBehaviour
     private PlayerMovement PlMovement;
 
     public int MinTimeInCrazyMode = 5;
-    public int MaxTimeInCrazyMode = 15;
+    public int MaxTimeInCrazyMode = 10;
+
+    int changeCount = 15;
 
     AudioSource audSrc;
 
@@ -101,8 +103,13 @@ public class PlayerSelect : MonoBehaviour
                     // If innocent girl, change to strong man
                     if (player == Character.InnocentGirl)
                     {
-                        if(audSrc!=null && montanha!=null)
+                        changeCount++;
+                        if (audSrc!=null && montanha!=null  && changeCount >=10)
+                        {
                             audSrc.PlayOneShot(montanha);
+                            changeCount = 0;
+                        }
+                      
                         SetStrongMan();
                     }
                     // if strong man, change to innocent girl

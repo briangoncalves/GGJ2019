@@ -8,6 +8,7 @@ public class NewGameManager : MonoBehaviour
     public static NewGameManager Instance;
     int index = -1;
     public string[] sceneNames;
+    public bool reloaded;
 
     private void Awake()
     {
@@ -44,12 +45,15 @@ public class NewGameManager : MonoBehaviour
         }
         else
         {
+            reloaded = false;
             SceneManager.LoadScene(sceneNames[index]);
+
         }
     }
 
     public void Reload()
-    { 
-              SceneManager.LoadScene(sceneNames[index]);
+    {
+        reloaded = true;
+        SceneManager.LoadScene(sceneNames[index]);
     }
 }
