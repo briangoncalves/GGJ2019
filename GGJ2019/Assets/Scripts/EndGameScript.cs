@@ -16,6 +16,6 @@ public class EndGameScript : MonoBehaviour
     void Update()
     {
         if (!audio.isPlaying)
-            SceneManager.LoadScene("StartGame");
+            SceneManager.LoadScene("Start");
     }
 }
