@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -609,7 +609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.2, y: 9}
+  m_AnchoredPosition: {x: -2.2000122, y: 9}
   m_SizeDelta: {x: -68, y: -90.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294509595
@@ -645,7 +645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.16
-  m_Text: "Brian\nCamilla\nIvo\nL\xEDvia\nMax\nRodrigo\nSabrina\nSthefanie\nTainara"
+  m_Text: "Brian\nCamilla\nIvo\nJeff\nL\xEDvia\nMax\nRodrigo\nSabrina\nSthefanie\nTainara"
 --- !u!222 &1294509596
 CanvasRenderer:
   m_ObjectHideFlags: 0

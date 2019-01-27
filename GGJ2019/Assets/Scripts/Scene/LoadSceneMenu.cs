@@ -9,4 +9,10 @@ public class LoadSceneMenu : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
+    public void LoadGame(string scene)
+    {
+        CountdownSingleton.Instance.RestartTime();
+        SceneManager.LoadScene(scene);
+    }
 }

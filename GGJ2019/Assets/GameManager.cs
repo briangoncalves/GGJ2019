@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : MonoBehaviour
 {
     public PlayerSelect player;
     public Transform playerTransform;
    //public GameObject room0Prefab;
     public Room currentRoom;
     public GameObject[] levels;
+    public static GameManager Instance;
     int index = -1;
 
     private void Awake()
     {
+        Instance = this;
     //    currentRoom  = Instantiate(room0Prefab).GetComponent<Room>();
         playerTransform.position = currentRoom.playerStartPosition.position;
         if(currentRoom.defaultCharacter == PlayerSelect.Character.InnocentGirl)

@@ -69,7 +69,7 @@ public class PlayerHide : MonoBehaviour
         else if (anim.player == PlayerSelect.Character.StrongMan)
         {
             // if action button pressed, try push
-            if (Input.GetButton(HideKey))
+            if (Input.GetButtonDown(HideKey))
             {
                 var box = IsTouchingBox(transform.position, DistanceRadius, "Box") ;
                 if ( box!=null)

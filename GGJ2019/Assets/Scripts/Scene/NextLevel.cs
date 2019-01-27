@@ -11,7 +11,6 @@ public class NextLevel : MonoBehaviour
     {
         if (other.tag == "Player")
             NewGameManager.Instance.LoadNextScene();
-           // GameManager.Instance.LoadNextRoom();
     }
 
 

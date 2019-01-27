@@ -46,7 +46,7 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Player")))
         {
-            SceneManager.LoadScene("GameOver");
+            NewGameManager.Instance.Reload();
         }
     }
 }

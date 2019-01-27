@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.35356715, g: 0.28447104, b: 0.14686382, a: 1}
+  m_IndirectSpecularColor: {r: 0.35356736, g: 0.28447095, b: 0.14686361, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 8db7f31dd45844541a353500e5c97bc2, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &37482088
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,11 +824,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1078134187}
   playerTransform: {fileID: 168279963}
-  room0Prefab: {fileID: 8018343214478156907, guid: caa7db3a3ab6a8347a80891c407d9988,
-    type: 3}
   currentRoom: {fileID: 0}
   levels:
-  - {fileID: 8018343214478156907, guid: 172fcc6104de04b4cabf2862ec228c02, type: 3}
+  - {fileID: 8018343214478156907, guid: 77278047abd46c248ac3719b98bf9b09, type: 3}
 --- !u!1 &980892837
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,11 +8,9 @@ public class PlayerMovement : MonoBehaviour {
     public float MoveSpeed = 3;
     public bool CanMove = true;
     public GameObject avatares;
-    private Rigidbody rb;
     PlayerSelect anim;
     private CharacterController ch;
 	void Start () {
-        rb = GetComponent<Rigidbody>();
         anim = GetComponent<PlayerSelect>();
         ch = GetComponent<CharacterController>();
         moveDirection = transform.position;

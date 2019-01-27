@@ -1,21 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class GameOverScript : MonoBehaviour
+public class naodestroi : MonoBehaviour
 {
-    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
-
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!audio.isPlaying)
-            SceneManager.LoadScene("Start");
+        
     }
 }
