@@ -31,6 +31,7 @@ public class Room : MonoBehaviour
 
         if ( activeRoom != null)
         {
+            activeRoom.gameObject.SetActive(false);
             Destroy(activeRoom.gameObject);
         }
         activeRoom = this;

@@ -9,8 +9,9 @@ public class NextLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
-            GameManager.Instance.LoadNextRoom();
+        if (other.tag == "Player")
+            NewGameManager.Instance.LoadNextScene();
+           // GameManager.Instance.LoadNextRoom();
     }
 
 

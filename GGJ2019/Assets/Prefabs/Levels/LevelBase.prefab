@@ -4662,6 +4662,8 @@ MonoBehaviour:
   NewRoomPos: {fileID: 3528048617905767907}
   playerStartPosition: {fileID: 415696607382633678}
   prefabs: []
+  defaultCharacter: 0
+  canChange: 1
   levelconfig: 
 --- !u!1 &9060971198071706011
 GameObject:
@@ -4775,6 +4777,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2869863813119412531}
     m_Modifications:
+    - target: {fileID: 873061180371488765, guid: 2d589d7b0d3c93846841cff74232fbaa,
+        type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 873061180371488761, guid: 2d589d7b0d3c93846841cff74232fbaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4830,11 +4837,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 873061180371488765, guid: 2d589d7b0d3c93846841cff74232fbaa,
-        type: 3}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
     - target: {fileID: 873061180371488760, guid: 2d589d7b0d3c93846841cff74232fbaa,
         type: 3}
       propertyPath: goToChange
@@ -4855,6 +4857,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6031793698021880072}
     m_Modifications:
+    - target: {fileID: 6031793699254324349, guid: 55d5bb862cf85b04c900ab981809e74a,
+        type: 3}
+      propertyPath: m_Name
+      value: box.004
+      objectReference: {fileID: 0}
     - target: {fileID: 6031793699254037701, guid: 55d5bb862cf85b04c900ab981809e74a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4910,21 +4917,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6031793699254324349, guid: 55d5bb862cf85b04c900ab981809e74a,
-        type: 3}
-      propertyPath: m_Name
-      value: box.004
-      objectReference: {fileID: 0}
-    - target: {fileID: 1416007900404243124, guid: 55d5bb862cf85b04c900ab981809e74a,
-        type: 3}
-      propertyPath: box
-      value: 
-      objectReference: {fileID: 1703882433694765161}
-    - target: {fileID: 1416007900404243124, guid: 55d5bb862cf85b04c900ab981809e74a,
-        type: 3}
-      propertyPath: CounterArrow
-      value: 
-      objectReference: {fileID: 620158575}
     - target: {fileID: 4849666744686037552, guid: 55d5bb862cf85b04c900ab981809e74a,
         type: 3}
       propertyPath: box
@@ -4935,16 +4927,6 @@ PrefabInstance:
       propertyPath: CounterArrow
       value: 
       objectReference: {fileID: 391619611}
-    - target: {fileID: 7463281212720661084, guid: 55d5bb862cf85b04c900ab981809e74a,
-        type: 3}
-      propertyPath: box
-      value: 
-      objectReference: {fileID: 1703882433694765161}
-    - target: {fileID: 7463281212720661084, guid: 55d5bb862cf85b04c900ab981809e74a,
-        type: 3}
-      propertyPath: CounterArrow
-      value: 
-      objectReference: {fileID: 790189214}
     - target: {fileID: 7237177236678116215, guid: 55d5bb862cf85b04c900ab981809e74a,
         type: 3}
       propertyPath: box
@@ -4955,6 +4937,26 @@ PrefabInstance:
       propertyPath: CounterArrow
       value: 
       objectReference: {fileID: 217090412}
+    - target: {fileID: 7463281212720661084, guid: 55d5bb862cf85b04c900ab981809e74a,
+        type: 3}
+      propertyPath: box
+      value: 
+      objectReference: {fileID: 1703882433694765161}
+    - target: {fileID: 7463281212720661084, guid: 55d5bb862cf85b04c900ab981809e74a,
+        type: 3}
+      propertyPath: CounterArrow
+      value: 
+      objectReference: {fileID: 790189214}
+    - target: {fileID: 1416007900404243124, guid: 55d5bb862cf85b04c900ab981809e74a,
+        type: 3}
+      propertyPath: box
+      value: 
+      objectReference: {fileID: 1703882433694765161}
+    - target: {fileID: 1416007900404243124, guid: 55d5bb862cf85b04c900ab981809e74a,
+        type: 3}
+      propertyPath: CounterArrow
+      value: 
+      objectReference: {fileID: 620158575}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d5bb862cf85b04c900ab981809e74a, type: 3}
 --- !u!1 &217090412 stripped

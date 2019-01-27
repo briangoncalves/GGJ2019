@@ -7,14 +7,14 @@ public class GameManager : Singleton<GameManager>
 {
     public PlayerSelect player;
     public Transform playerTransform;
-    public GameObject room0Prefab;
+   //public GameObject room0Prefab;
     public Room currentRoom;
     public GameObject[] levels;
     int index = -1;
 
     private void Awake()
     {
-        currentRoom  = Instantiate(room0Prefab).GetComponent<Room>();
+    //    currentRoom  = Instantiate(room0Prefab).GetComponent<Room>();
         playerTransform.position = currentRoom.playerStartPosition.position;
         if(currentRoom.defaultCharacter == PlayerSelect.Character.InnocentGirl)
         {
