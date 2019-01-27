@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSelect : MonoBehaviour {
+public class PlayerSelect : MonoBehaviour 
+{
     public enum Character { InnocentGirl, StrongMan, CrazyDude }
     public Character player = Character.InnocentGirl;
     public int CrazyRandom = 1;
-
+    public Animator[] charactersAvatar;
+    int animatorIndex = 0;
+    
     private PlayerColliderBox MoveObjectScript;
     private PlayerHide HideScript;
     private PlayerMovement PlMovement;
@@ -42,6 +45,9 @@ public class PlayerSelect : MonoBehaviour {
     void SetInnocentGirl()
     {
         player = Character.InnocentGirl;
+        charactersAvatar[animatorIndex].gameObject.SetActive(false);
+        charactersAvatar[0].gameObject.SetActive(true);
+        animatorIndex = 0;
         // enable / disable each character ability
         if (HideScript != null)
             HideScript.enabled = true;
@@ -52,6 +58,10 @@ public class PlayerSelect : MonoBehaviour {
     void SetStrongMan()
     {
         player = Character.StrongMan;
+        charactersAvatar[animatorIndex].gameObject.SetActive(false);
+        charactersAvatar[1].gameObject.SetActive(true);
+
+        animatorIndex = 1;
         // enable / disable each character ability
         if (HideScript != null)
             HideScript.enabled = false;
@@ -78,6 +88,9 @@ public class PlayerSelect : MonoBehaviour {
                 {
                     TimeInCrazyMode = Random.Range(5, 15);
                     player = Character.CrazyDude;
+                    charactersAvatar[animatorIndex].gameObject.SetActive(false);
+                    charactersAvatar[2].gameObject.SetActive(true);
+                    animatorIndex = 2;
                     if (PlMovement != null)
                         PlMovement.MoveSpeed = PlMovement.MoveSpeed * -1;
                     StartCoroutine("CrazyCountdown");
@@ -98,4 +111,20 @@ public class PlayerSelect : MonoBehaviour {
             }
         }
     }
+
+    public void SetCurrentavatarMove(bool moving)
+    {
+        charactersAvatar[animatorIndex].SetBool("moving", moving);
+    }
+
+    public void SetTriggerToCurrent(string trigger)
+    {
+        charactersAvatar[animatorIndex].SetTrigger(trigger);
+    }
+
+    public void SetCurrentAvatarHide(bool moving)
+    {
+        charactersAvatar[animatorIndex].SetBool("hide", moving);
+    }
+
 }
