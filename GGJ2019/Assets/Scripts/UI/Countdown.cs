@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour {    
     public Text CountdownUI; //UI Text Object
+    public RawImage CountdownPointer;
     void Start()
     {
         StartCoroutine("LoseTime");
@@ -13,6 +14,8 @@ public class Countdown : MonoBehaviour {
     }
     void Update()
     {
+        CountdownPointer.rectTransform.Rotate(0,0,((100f / 360f) * (100f / CountdownSingleton.Instance.TimeLeft)));
+
         CountdownUI.text = (CountdownSingleton.Instance.TimeLeft / 60 + " Minutes left"); //Showing the Score on the Canvas
         if (CountdownSingleton.Instance.TimeLeft == 0)
             SceneManager.LoadScene("GameOver");

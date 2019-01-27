@@ -8,7 +8,7 @@ public class CountdownSingleton : Singleton<CountdownSingleton>
     protected CountdownSingleton() { }
 
     // Then add whatever code to the class you need as you normally would.
-    public int StartTime = 3600;
+    public int StartTime = 360;
     public int TimeLeft = 3600; //Seconds Overall
     public void RestartTime()
     {
