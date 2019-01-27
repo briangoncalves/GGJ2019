@@ -44,7 +44,7 @@ public class EnemyMovement : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Player")))
+        if (!PlayerHide.hided && collision.gameObject.layer.Equals(LayerMask.NameToLayer("Player")))
         {
             NewGameManager.Instance.Reload();
         }

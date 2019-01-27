@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHide : MonoBehaviour
 {
     PlayerSelect anim;
-
+    public static bool hided = false;
     bool IsTouchingLayer(Vector3 center, float radius, string layer)
     {
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
@@ -50,12 +50,14 @@ public class PlayerHide : MonoBehaviour
                 {
                     // if on hiding spot, character stops to render
                     anim.SetCurrentAvatarHide(true);
+                    hided = true;
                 }
                 else
                 {
                     // if not on hiding spot, render
                     anim.SetCurrentAvatarHide(false);
                     pm.CanMove = true;
+                    hided = false;
                 }
             }
             else
@@ -63,6 +65,7 @@ public class PlayerHide : MonoBehaviour
                 // if not key pressed, render
                 anim.SetCurrentAvatarHide(false);
                 pm.CanMove = true;
+                hided = false;
             }
         }
 

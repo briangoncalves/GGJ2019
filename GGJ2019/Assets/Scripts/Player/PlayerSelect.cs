@@ -9,18 +9,26 @@ public class PlayerSelect : MonoBehaviour
     public int CrazyRandom = 1;
     public Animator[] charactersAvatar;
     int animatorIndex = 0;
-    
+    AudioClip montanha;
+    AudioClip[] evil;
     private PlayerColliderBox MoveObjectScript;
     private PlayerMovement PlMovement;
 
     public int MinTimeInCrazyMode = 5;
     public int MaxTimeInCrazyMode = 15;
 
-    void Start () {
+    AudioSource audSrc;
+
+    void Start () 
+    {
         MoveObjectScript = GetComponent<PlayerColliderBox>();
         PlMovement = GetComponent<PlayerMovement>();
         if (MoveObjectScript != null)
             MoveObjectScript.enabled = false;
+        audSrc = GetComponent<AudioSource>();
+        if (audSrc == null)
+            audSrc = gameObject.AddComponent<AudioSource>();
+        montanha = Resources.Load<AudioClip>("Montanha");
     }
 
     IEnumerator CrazyCountdown()
@@ -51,12 +59,15 @@ public class PlayerSelect : MonoBehaviour
     public void SetStrongMan()
     {
         player = Character.StrongMan;
+       
         charactersAvatar[animatorIndex].gameObject.SetActive(false);
         charactersAvatar[1].gameObject.SetActive(true);
 
         animatorIndex = 1;
         if (MoveObjectScript != null)
             MoveObjectScript.enabled = true;
+
+
     }
 
     public float TimeInCrazyMode;
@@ -90,6 +101,8 @@ public class PlayerSelect : MonoBehaviour
                     // If innocent girl, change to strong man
                     if (player == Character.InnocentGirl)
                     {
+                        if(audSrc!=null && montanha!=null)
+                            audSrc.PlayOneShot(montanha);
                         SetStrongMan();
                     }
                     // if strong man, change to innocent girl
