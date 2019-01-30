@@ -8,7 +8,6 @@ public class AudioIntro : MonoBehaviour
     public GameObject img;
     public PlayerMovement player;
     public AudioClip clip;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +19,13 @@ public class AudioIntro : MonoBehaviour
     {
         img.SetActive(false);
         player.enabled = true;
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.H))
+        {
+            GoNext();
+        }
     }
 }
